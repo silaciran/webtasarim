@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bilet Al</title>
+  <link rel="stylesheet" href="bilet.css">
+
+</head>
+<body>
+
+  <header>
+    <h1>Bilet Al</h1>
+    <nav>
+      <a href="index.html">Anasayfa</a>
+      <a href="hakkimizda.html">Hakkımızda</a>
+      <a href="oyunlar.html">Oyunlar</a>
+      <a href="salon.html">Salon</a>
+      <a href="bilet.html">Bilet Al</a>
+      <a href="iletisim.html">İletişim</a>
+      <a href="galeri.html">Galeri</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Bilet Bilgileri</h2>
+
+    <form action="biletlerim.html" method="get">
+      <label for="oyun">Oyun Seçimi:</label>
+      <select id="oyun" name="oyun">
+        <option value="">Bir oyun seçin</option>
+        <option value="Kırık Zamanlar">Kırık Zamanlar</option>
+        <option value="Saklambaç">Saklambaç</option>
+        <option value="Kahkaha Molası">Kahkaha Molası</option>
+        <option value="Yansıma">Yansıma</option>
+      </select>
+    
+      <label for="ad">Ad Soyad:</label>
+      <input type="text" id="ad" name="ad" placeholder="Adınızı ve soyadınızı girin">
+    
+      <label for="email">E-posta (isteğe bağlı):</label>
+      <input type="email" id="email" name="email" placeholder="ornek@mail.com">
+    
+      <button type="submit" class="submit-btn">Bileti Al</button>
+    </form>
+    
+  </div>
+
+</body>
+</html>

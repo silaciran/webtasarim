@@ -1,21 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İletişim</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İletişim</title>
+  <link rel="stylesheet" href="iletisim.css">
 </head>
+
 <body>
-    <h1> İLETİŞİM </h1>
-    <hr>
-    <p1>İletişim Bilgileri:
-        <br>
-        Adres: Hayal Şehri, Sanat Sokak No: 42, Kültür Mahallesi, 34000
-        <br>
-        Telefon: +90 (212) 555 1234
-        <br>
-        E-posta: iletisim@hayaltiyatro.com
-        </p1>
-        <p><a href="index.html">Anasayfaya Git </a></p>
+
+  <header>
+    <h1>İletişim</h1>
+    <nav>
+      <a href="index.html">Anasayfa</a>
+      <a href="hakkimizda.html">Hakkımızda</a>
+      <a href="oyunlar.html">Oyunlar</a>
+      <a href="salon.html">Salon</a>
+      <a href="bilet.html">Bilet Al</a>
+      <a href="iletisim.html">İletişim</a>
+      <a href="galeri.html">Galeri</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Bizimle İletişime Geçin</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Ad Soyad" required>
+      <input type="email" placeholder="E-posta" required>
+      <input type="text" placeholder="Konu">
+      <textarea placeholder="Mesajınız..." required></textarea>
+      <button type="submit">Gönder</button>
+    </form>
+
+    <div class="info">
+      <h3>İletişim Bilgileri</h3>
+      <p>📍 Adres: Sahne Sokak No:12, Tiyatro Mahallesi, İstanbul</p>
+      <p>📞 Telefon: 0212 123 45 67</p>
+      <p>📧 E-posta: bilgi@isiktiyatrolari.com</p>
+    </div>
+  </div>
+
 </body>
 </html>
