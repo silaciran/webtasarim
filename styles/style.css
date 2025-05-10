@@ -1,0 +1,536 @@
+/* SADECE Anasayfa için görselli arka plan */
+body.home {
+  background-image: url('../gorsel/oyun6.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Diğer tüm sayfalar için düz bordo arka plan */
+body.default {
+  background-color: #370101;
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVBAR */
+nav {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* ANA ALAN */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* GİRİŞ YAZISI */
+.giris-alani {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 800px;
+  margin-bottom: 30px;
+}
+
+.giris-alani h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.giris-alani p {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+/* BUGÜNÜN OYUNU ALANI */
+.bugun-oyun {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px 30px;
+  border-left: 6px solid gold;
+  border-radius: 8px;
+  font-size: 18px;
+  color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* FOOTER */
+footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}
+.oyunlar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 sütun */
+  gap: 20px;
+}
+
+.oyunlar h1 {
+  grid-column: 1 / -1; /* başlık tüm satıra yayılsın */
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Her kutu */
+.oyun-kutu {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 12px;
+  border-left: 4px solid #ffcc00;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Başlık ve açıklama daha kompakt */
+.oyun-kutu h2 {
+  font-size: 16px;
+  margin: 8px 0 5px;
+  color: #ffe;
+}
+
+.oyun-kutu p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Responsive için tablet ve telefon görünümü */
+@media (max-width: 992px) {
+  .oyunlar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .oyunlar {
+    grid-template-columns: 1fr;
+  }
+}
+.oyun-gorsel {
+  width: 100%;
+  max-height: 300px; /* Eskiden 150px idi */
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.salon-formu {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  color: white;
+  text-align: left;
+}
+
+.salon-formu h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #ffcc00;
+}
+
+.salon-formu form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.salon-formu input,
+.salon-formu select {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+}
+
+.radio-grup {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+
+.radio-grup label {
+  font-size: 15px;
+}
+
+button[type="submit"] {
+  background-color: #ffcc00;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #e6b800;
+}
+.bilet-kontrol {
+  max-width: 500px;
+  margin: 40px auto;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  color: white;
+  text-align: left;
+}
+
+.bilet-kontrol h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffcc00;
+}
+
+.bilet-kontrol form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.bilet-kontrol input {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.bilet-kontrol button[type="submit"] {
+  background-color: #ffcc00;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.bilet-kontrol button:hover {
+  background-color: #e6b800;
+}
+
+#sonucAlani {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: rgba(255,255,255,0.07);
+  border-radius: 8px;
+  text-align: center;
+}
+.iletisim {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 10px;
+}
+
+.iletisim h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.iletisim-kutu p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #eee;
+}
+
+.iletisim-kutu a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+.iletisim-formu {
+  margin-top: 40px;
+}
+
+.iletisim-formu h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.iletisim-formu form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.iletisim-formu input,
+.iletisim-formu textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.iletisim-formu button {
+  background-color: #ffcc00;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  cursor: not-allowed;
+  color: #000;
+  border-radius: 5px;
+}
+.galeri {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.galeri h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.galeri-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 sütun olacak */
+  gap: 20px;
+}
+
+.galeri-grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.galeri-grid img:hover {
+  transform: scale(1.05);
+}
+
+.sss {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.sss h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.accordion-item {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  display: block;
+  padding: 15px;
+  background-color: #444;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+  background-color: #666;
+}
+
+.accordion-content {
+  display: none;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ddd;
+  text-align: left;
+}
+
+.accordion-item input[type="checkbox"] {
+  display: none;
+}
+
+.accordion-item input[type="checkbox"]:checked + .accordion-header + .accordion-content {
+  display: block;
+}
+
+/* Etkinlikler Sayfası */
+.etkinlikler {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.etkinlikler h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.etkinlik {
+  background-color: #403b3b;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.etkinlik h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.etkinlik p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+  color: #655f5f;
+}
+
+/* Oyuncular Sayfası */
+.oyuncular {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.oyuncular h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+/* Üstteki 4 oyuncuyu hizalamak için */
+.oyuncular-ust {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 sütun */
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* Alt kısımdaki 4 oyuncuyu hizalamak için */
+.oyuncular-alt {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 sütun */
+  gap: 30px;
+}
+
+/* Her bir oyuncu için kutu */
+.oyuncu {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.oyuncu:hover {
+  transform: translateY(-10px);
+}
+
+.oyuncu-foto {
+  width: 100%;
+  height: 180px; /* Fotoğraf boyutunu ayarladık */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.oyuncu h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.oyuncu p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .oyuncular-ust,
+  .oyuncular-alt {
+    grid-template-columns: repeat(2, 1fr); /* 2 sütun olacak */
+  }
+}
+
+@media (max-width: 768px) {
+  .oyuncular-ust,
+  .oyuncular-alt {
+    grid-template-columns: 1fr; /* 1 sütun olacak */
+  }
+}
+
+
